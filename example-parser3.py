@@ -42,7 +42,7 @@ with open(input_file_name) as file_to_process:
                     escapechar = '\\',
                     lineterminator = '\n',
                     quotechar = '"',
-                    quoting = csv.QUOTE_NONNUMERIC,
+                    quoting = csv.QUOTE_NONE,
                     skipinitialspace = True
                     )
 
