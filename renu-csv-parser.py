@@ -63,13 +63,11 @@ with open(input_file_name) as file_to_process:
       out_row.append(row[j])
     parsed_data.append(out_row)
 
-  print(parsed_data)
-
-  #convert all floats to integers
-#  for row in parsed_data:
-#    for i in range(len(row)):
-#      if isinstance(row[i], float) and row[i].is_integer():
-#        row[i] = int(row[i])
+  #convert all asn to integers
+  for row in parsed_data:
+    for i in range(len(row)):
+      if isinstance(row[i], str) and row[i].isdecimal():
+        row[i] = int(row[i])
 
 
 # WRITING PARSED LOG DATA

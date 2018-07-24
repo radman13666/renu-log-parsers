@@ -35,14 +35,14 @@ parsed_data = []
 
 # READING LOG DATA
 with open(input_file_name) as file_to_process:
-  # for general csv files
+  # for very special csv files
   rows = csv.reader(file_to_process, 
                     delimiter = ',',
                     doublequote = False,
                     escapechar = '\\',
                     lineterminator = '\n',
                     quotechar = '"',
-                    quoting = csv.QUOTE_NONE,
+                    quoting = csv.QUOTE_NONNUMERIC,
                     skipinitialspace = True
                     )
 
