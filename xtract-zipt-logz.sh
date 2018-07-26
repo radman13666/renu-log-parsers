@@ -1,0 +1,19 @@
+#!/bin/bash
+DIR_TO_GET_ZIPPED_FILES=$1
+DIR_TO_PUT_UNZIPPED_FILES=$2
+
+if [ ! -d $DIR_TO_GET_ZIPPED_FILES ]; then
+  exit 1
+fi
+
+if [ ! -d $DIR_TO_PUT_UNZIPPED_FILES ]; then
+  mkdir -p $DIR_TO_PUT_UNZIPPED_FILES
+fi
+
+FILES_TO_UNZIP=`ls $DIR_TO_GET_ZIPPED_FILES`
+
+for file in $FILES_TO_UNZIP; do
+  unzip -qq $DIR_TO_GET_ZIPPED_FILES/$file -d $DIR_TO_PUT_UNZIPPED_FILES
+  rm $DIR_TO_GET_ZIPPED_FILES/$file
+  touch $DIR_TO_GET_ZIPPED_FILES/$file
+done
