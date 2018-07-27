@@ -2,3 +2,4 @@
 *.txt
 *_result
 *.swp
+__pycache__/
