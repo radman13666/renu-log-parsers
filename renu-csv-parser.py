@@ -9,7 +9,7 @@ from source_identifier import *
 input_file_name = sys.argv[1]
 output_file_name = sys.argv[2]
 
-log_source = get_log_source(input_file_name)
+#log_source = get_log_source(input_file_name)
 download_source = get_download_source(input_file_name)
 
 required_columns = [
@@ -68,11 +68,11 @@ with open(input_file_name) as file_to_process:
     parsed_data.append(out_row)
 
   #add log and download source
-  parsed_data[0].append("log_source")
+#  parsed_data[0].append("log_source")
   parsed_data[0].append("download_source")
   
   for k in range(1, len(parsed_data)):
-    parsed_data[k].append(log_source)
+#    parsed_data[k].append(log_source)
     parsed_data[k].append(download_source)
 
 
