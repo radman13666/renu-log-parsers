@@ -13,7 +13,7 @@ output_file_name = sys.argv[2]
 download_source = get_download_source(input_file_name)
 
 required_columns = [
-  re.compile(r'^(category|type|infection)$'),
+  re.compile(r'^(.category|type|infection)$'),
   re.compile(r'^(address|ip)$'),
   re.compile(r'^asn$'),
   re.compile(r'^timestamp$'),
